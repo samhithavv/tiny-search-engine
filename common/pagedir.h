@@ -1,3 +1,8 @@
+//Samhitha Vallury, CS50FA24
+//Github: samhithavv
+//Lab 4 - pagedir .h file
+
+
 #ifndef __PAGEDIR_H
 #define __PAGEDIR_H
 
@@ -27,7 +32,13 @@ If there's an error opening the file for writing, it prints an error message and
 
 */
 
+// Saves the HTML content of a webpage to a specified directory with a unique document ID.
 void pagedir_save(const webpage_t* page, const char* pageDirectory, const int docID);
 
+// Loads a webpage from the specified directory using the document ID, recreating 
+webpage_t* load_webpage(const char* pageDir, const int docID);
+
+// Checks if the provided page directory exists and is accessible, verifying
+bool pagedir_validate(const char *pageDirectory);
 
 #endif

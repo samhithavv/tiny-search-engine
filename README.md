@@ -1,3 +1,10 @@
+```
+******************
+* EXTENSION USED *
+****************** 
+```
+Extension used for Lab 5 - Indexer
+
 # CS50 TSE
 ## Samhitha Vallury - github: samhithavv
 
@@ -7,8 +14,8 @@ Watch there for any commits that may represent updates to the assignment or spec
 
 Add here any assumptions you made while writing the crawler, any ways in which your implementation differs from the three Specs, or any ways in which you know your implementation fails to work.
 
-Crawler: Currently contains code for crawler, which goes through a webpage and collects the URLs within it. It will then examine those new URLs depending on the depth. - I made no assumptions beyond the ones included in the instructions. 
+Crawler: Cntains code for crawler, which goes through a webpage and collects the URLs within it. It will then examine those new URLs depending on the depth. - I made no assumptions beyond the ones included in the instructions. 
 
-Indexer:
+Indexer: Contains code for crawler, which goes through output of crawler and then collects words greater than or equal to length and counts how many time it appears in each document. - I made no assumptions beyond the ones included in the instructions. 
 
 Querier:

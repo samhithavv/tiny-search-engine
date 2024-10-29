@@ -1,6 +1,6 @@
 //Samhitha Vallury, CS50FA24
 //Github: samhithavv
-//Lab 4 - Pagedir for 
+//Lab 4 - Pagedir module
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -12,6 +12,7 @@
 #include "../libcs50/hashtable.h"
 #include "../libcs50/set.h"
 #include "../libcs50/bag.h"
+#include "../libcs50/file.h"
 #include <assert.h>
 
 /* construct the pathname for the .crawler file in that directory
@@ -80,3 +81,58 @@ void pagedir_save(const webpage_t* page, const char* pageDirectory, const int do
     fclose(file);
 
 }
+
+
+// takes file from crawler output and gets the url inside of it
+webpage_t* load_webpage(const char* pageDir, const int docID) {
+
+    char* filename = malloc(strlen(pageDir) + 10); //malloc memory for filename
+    
+    sprintf(filename, "%s/%d", pageDir, docID); //make the filename
+
+
+    FILE *fp = fopen(filename, "r");
+
+    if (fp == NULL) {
+        free(filename); //frees
+        return NULL;
+    }
+    
+    //reads the lines for depth, url, and html
+    char* url = file_readLine(fp);
+    char* depth = file_readLine(fp);
+    char* html = file_readFile(fp);
+
+    //makes new webpage object based on that
+    webpage_t* webpage = webpage_new(url, atoi(depth), html);
+    fclose(fp);
+    free(filename); //frees the filenmae
+    free(depth);
+
+    return webpage; //return new webpage object
+    
+}
+
+
+
+bool pagedir_validate(const char *pageDirectory) {
+    if (pageDirectory == NULL) { //null check
+        fprintf(stderr, "Error: pageDirectory is NULL\n");
+        return false;
+    }
+
+    // make the path to the .crawler file
+    char crawler_path[strlen(pageDirectory) + strlen("/.crawler") + 1];
+
+    sprintf(crawler_path, "%s/.crawler", pageDirectory);
+
+    // checking by opening the .crawler file to see if it exists
+    FILE *file = fopen(crawler_path, "r");
+    if (file) {
+        fclose(file);  //if file exists, return true
+        return true;
+    } else {
+        return false;
+    }
+}
+

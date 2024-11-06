@@ -3,7 +3,7 @@
 * EXTENSION USED *
 ****************** 
 ```
-Extension used for Lab 5 - Indexer
+Extension used for Lab 6 - Querier
 
 # CS50 TSE
 ## Samhitha Vallury - github: samhithavv

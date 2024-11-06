@@ -18,4 +18,4 @@ Crawler: Cntains code for crawler, which goes through a webpage and collects the
 
 Indexer: Contains code for crawler, which goes through output of crawler and then collects words greater than or equal to length and counts how many time it appears in each document. - I made no assumptions beyond the ones included in the instructions. 
 
-Querier:
+Querier: The TSE Querier is a standalone program that reads the index file produced by the TSE Indexer, and page files produced by the TSE Querier, and answers search queries submitted via stdin.

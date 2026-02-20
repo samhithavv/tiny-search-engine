@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "stdlib.h": "c",
+        "hash.h": "c",
+        "index.h": "c",
+        "counters.h": "c",
+        "webpage.h": "c",
+        "word.h": "c"
+    }
+}

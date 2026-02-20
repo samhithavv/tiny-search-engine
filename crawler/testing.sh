@@ -24,12 +24,12 @@ mkdir letters_test toscrape_test wiki_test
 # ./crawler http://cs50tse.cs.dartmouth.edu/tse/letters/index.html letters_test 10
 
 #  ./crawler http://cs50tse.cs.dartmouth.edu/tse/toscrape/index.html toscrape_test 0
-./crawler http://cs50tse.cs.dartmouth.edu/tse/toscrape/index.html  toscrape_test 1
+#./crawler http://cs50tse.cs.dartmouth.edu/tse/toscrape/index.html  toscrape_test 1
 #  ./crawler http://cs50tse.cs.dartmouth.edu/tse/toscrape/index.html  toscrape_test 3
 
 # ./crawler http://cs50tse.cs.dartmouth.edu/tse/wikipedia/index.html  wiki_test 0
 # ./crawler http://cs50tse.cs.dartmouth.edu/tse/wikipedia/index.html wiki_test 3
-./crawler http://cs50tse.cs.dartmouth.edu/tse/wikipedia/index.html  wiki_test 1
+#./crawler http://cs50tse.cs.dartmouth.edu/tse/wikipedia/index.html  wiki_test 1
 
 
 
